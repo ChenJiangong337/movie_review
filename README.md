@@ -15,4 +15,3 @@ Execute the order in the same path as those codes:
 
 To use the classifier:  
 Operate the file: `movie_classifier.py`  
-It will operate the classifier for 10 times and return every error rate and the mean accuracy. 
