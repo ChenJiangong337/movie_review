@@ -10,7 +10,7 @@ Test: Randomly generate train sets and test sets, then train and test them, repe
 Based on python 3.6.5, scrapy 1.5.1
 
 To crawl data from douban.com and save it:  
-Execute the order in the same path as those codes:  
+Execute the order in the path 'tutorial':  
 `scrapy crawl review -o XXX.csv(any filename you'd like)`  
 
 To use the classifier:  
