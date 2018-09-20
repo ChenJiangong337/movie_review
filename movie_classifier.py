@@ -7,7 +7,7 @@ import random
 import nltk
 import bayes
 
-#读取从网站中爬取的影评，并将顺序打乱
+#读取从网站中爬取的影评
 f = codecs.open('tutorial/review.csv','r',encoding='utf-8')
 reader = csv.reader(f)
 
@@ -48,7 +48,8 @@ for item in documents:
 
 #获取词汇表
 all_words = nltk.FreqDist(w for w in seg_review)
-word_features = [w for (w,_) in all_words.most_common(3000)]
+word_features = [w for (w,_) in all_words.most_common(5000)]
+print('The vocabulary has been created successfully!')
 
 #对影评和评分进行整合，调整格式使之能够被分类器识别
 featuresets = []
@@ -59,11 +60,12 @@ for i in range(len(emotion)):
 
 sumRate = 0
 for i in range(10):
+    #打乱顺序确保每次结果均不同
     random.shuffle(featuresets)
     train_set, test_set = featuresets[int(0.1*len(emotion)):], featuresets[:int(0.1*len(emotion))]
     #训练分类器，使用分类器，并返回分类器错误分类的条目以及错误率
     errorItem,errorRate = bayes.classifier(train_set,test_set,word_features)
     sumRate += errorRate
 meanRate = 1-sumRate/10
-print('平均正确率为：{:.2%}'.format(meanRate))
+print('mean accuracy:{:.2%}'.format(meanRate))
 
