@@ -7,7 +7,7 @@ Test: Randomly generate train sets and test sets, then train and test them, repe
 
 # How to use
 
-Based on python 3.6.5, scrapy 1.5.1
+Based on python 3.6.5, scrapy 1.5.1  
 Make sure that those modules are in your PC: jieba, numpy, nltk, codecs  
 
 To crawl data from douban.com and save it, you need execute those orders in the path 'tutorial':  
