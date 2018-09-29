@@ -9,7 +9,7 @@ Test: Randomly generate train sets and test sets, then train and test them, repe
 
 Based on python 3.6.5, scrapy 1.5.1  
 Make sure that those modules are in your PC: jieba, numpy, nltk, codecs  
-Although there is an embeded bayes classifier in nltk module, I create an independent one so that I could utilize it flexiblely  
+Although there is an embeded bayes classifier in the nltk module, I create an independent one so that I could utilize it flexiblely  
 
 To crawl data from douban.com and save it, you need execute those orders in the path 'tutorial':  
 First, get the movie ids:  
